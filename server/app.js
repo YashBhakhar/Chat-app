@@ -5,7 +5,7 @@ import { errorMiddleware } from './middlewares/error.js';
 import cookieParser from 'cookie-parser';
 import userRoutes from './routes/user.js';
 import chatRoutes from './routes/chat.js';
-import { createUser } from './seeders/user.js';
+import { createGroupChats, createMessagesInChat, createSingleChat, createUser } from './seeders/user.js';
 
 dotenv.config({
   path: './.env'
@@ -20,6 +20,9 @@ const mongoURI = process.env.MONGO_PATH
 
 connectDB(mongoURI)
 
+// createSingleChat(10)
+// createGroupChats(10)
+// createMessagesInChat('67c587b5d6afb845415a35a2', 50)
 
 app.use('/user', userRoutes);
 app.use('/chat', chatRoutes);

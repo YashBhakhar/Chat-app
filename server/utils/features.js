@@ -30,3 +30,5 @@ export const emitEvent = (req, event, users, data) => {
   console.log('yash', event);
   
 }
+
+export const deleteFilesFromCloudinary = (ids) => {}
